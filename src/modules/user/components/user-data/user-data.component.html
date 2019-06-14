@@ -1,1 +1,11 @@
-<div>{{ user | json }}</div>
+<!-- <div>{{ user | json }}</div> -->
+
+<mat-spinner *ngIf="!parent.user.data"></mat-spinner>
+
+<mat-card *ngIf="parent.user.data" class="example-card">
+    <mat-card-header>
+        <div mat-card-avatar [style.background-image]="'url('+parent.user.data.avatar+')'" class="example-header-image"></div>
+        <mat-card-title>{{parent.user.data.first_name}} {{parent.user.data.last_name}}</mat-card-title>
+        <mat-card-subtitle>{{parent.user.data.email}}</mat-card-subtitle>
+    </mat-card-header>   
+</mat-card>

@@ -1,0 +1,12 @@
+table{
+    width: 500px;
+    max-width:500px;
+}
+
+tr td:first-of-type{
+    cursor: pointer;
+}
+
+tr td:first-of-type:hover{
+    color: #eee;
+}

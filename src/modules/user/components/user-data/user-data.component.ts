@@ -8,13 +8,13 @@ import { UserComponent } from '../user/user.component';
   styleUrls: ['./user-data.component.css']
 })
 export class UserDataComponent implements OnInit {
-
-  @Input() user: UserInterface;
+  myStyles;
+  @Input() user: UserInterface = {} as any;
 
   constructor(@Optional() private parent: UserComponent) { }
 
   ngOnInit() {
-    console.log(this.parent);
+    // console.log(this.parent);
     this.parent.user = { ...this.user };
   }
 
